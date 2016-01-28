@@ -1,7 +1,8 @@
 var express = require('express');
 
+var ip = process.env.IP;
+var port = process.env.PORT;
 var app = express();
-var port = 3000;
 
 app.get('/', function getCb(req, res) {
   var ip6and4 = req.ip;
@@ -27,4 +28,4 @@ app.get('/', function getCb(req, res) {
   res.json(retObj);
 });
 
-app.listen(port);
+app.listen(port, ip);
