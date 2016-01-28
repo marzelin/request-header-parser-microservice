@@ -8,7 +8,7 @@
   "eslintConfig": {
     "extends": "airbnb",
     "plugins": [
-        "react"
+      "react"
     ]
   },
   "repository": {
@@ -16,4 +16,7 @@
     "url": "git+https://github.com/marzelin/request-header-parser-microservice.git"
   },
   "author": "marzelin@gmail.com",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
 }
