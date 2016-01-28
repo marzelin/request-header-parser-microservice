@@ -22,7 +22,8 @@ app.get('/', function getCb(req, res) {
   var retObj = {
     ipaddress: ip,
     language: language,
-    software: software
+    software: software,
+    forwardedFor: req.headers['x-forwarded-for']
   }
 
   res.json(retObj);
