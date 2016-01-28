@@ -5,11 +5,10 @@ var port = process.env.PORT;
 var app = express();
 
 app.get('/', function getCb(req, res) {
-  var ip6and4 = req.ip;
-  var ip4regExp = /(?:\d{1,3}\.){3}\d{1,3}/;
-  var ip = ip6and4.match(ip4regExp)[0];
 
   var headers = req.headers;
+
+  var ipaddress = headers['x-forwarded-for'];
 
   var acceptLanguageField = headers['accept-language'];
   var firstValueRegExp = /[^,]*/
@@ -20,11 +19,10 @@ app.get('/', function getCb(req, res) {
   var software = userAgent.match(valueInParenthesesRegExp)[2];
 
   var retObj = {
-    ipaddress: ip,
+    ipaddress: ipaddress,
     language: language,
-    software: software,
-    forwardedFor: req.headers['x-forwarded-for']
-  }
+    software: software
+  };
 
   res.json(retObj);
 });
