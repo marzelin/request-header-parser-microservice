@@ -1,0 +1,19 @@
+{
+  "name": "request-header-parser-microservice",
+  "private": true,
+  "version": "0.0.1",
+  "description": "request header parser microservice",
+  "main": "app.js",
+  "scripts": {},
+  "eslintConfig": {
+    "extends": "airbnb",
+    "plugins": [
+        "react"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marzelin/request-header-parser-microservice.git"
+  },
+  "author": "marzelin@gmail.com",
+}
